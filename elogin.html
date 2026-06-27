@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In | XYZ Corporation</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Navigation */
+        nav {
+            width: 50%;
+            background: #444;
+            padding: 5px 0;
+            text-align: center;
+        }
+        nav h1 {
+            color: #fff;
+            margin: 0;
+        }
+        
+        #navli {
+            list-style: none;
+            padding: 0;
+        }
+        #navli li {
+            display: inline;
+            margin: 0 15px;
+        }
+        #navli a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+        .homered {
+            color: red;
+        }
+        
+        /* Login Box */
+        .loginbox {
+            width: 320px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .loginbox p {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .loginbox input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #555;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        .loginbox input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #444;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .loginbox input[type="submit"]:hover {
+            background: #ff6f61;
+            transform: scale(1.1);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        
+        <ul id="navli">
+            <li><a class="homeblack" href="index.html">HOME</a></li>
+            <li><a class="homered" href="elogin.html">Employee Login</a></li>
+            <li><a class="homeblack" href="alogin.html">Admin Login</a></li>
+        </ul>
+    </nav>
+    <div class="loginbox">
+        <h1>Employee Login</h1>
+        <form action="process/eprocess.php" method="POST">
+            <p>Email</p>
+            <input type="text" name="mailuid" placeholder="Enter Email Address" required>
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="Enter Password" required>
+            <input type="submit" name="login-submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
